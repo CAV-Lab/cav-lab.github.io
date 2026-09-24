@@ -1,0 +1,80 @@
+/* =================================================_ */
+/* Collapsible Projects Modules Styling               */
+/* =================================================_ */
+:root {
+    --module-accent: #2e8b57;
+}
+
+.research-module {
+    margin-top: 2.5em; 
+    margin-bottom: 2.5em;
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0.75em 1em;
+    background-color: #f4f9f6; 
+    border-left: 4px solid var(--module-accent);
+    border-top: 1px solid rgba(46, 139, 87, 0.15);
+    border-right: 1px solid rgba(46, 139, 87, 0.15);
+    border-bottom: 1px solid rgba(46, 139, 87, 0.15);
+    border-radius: 0.375em;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    user-select: none;
+    margin-bottom: 1.5em;
+}
+
+.accordion-header:hover {
+    background-color: #eaf4ee;
+    border-color: var(--module-accent);
+    box-shadow: 0 2px 8px rgba(46, 139, 87, 0.08);
+}
+
+.accordion-header header.main {
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.accordion-header header.main h2 {
+    margin-bottom: 0 !important;
+}
+
+.accordion-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--module-accent);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 0.85em;
+    transition: transform 0.3s ease, background-color 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 1em;
+}
+
+.accordion-header:hover .accordion-icon {
+    background-color: #246f45; 
+}
+
+.accordion-header.collapsed .accordion-icon {
+    transform: rotate(-90deg);
+}
+
+.accordion-content {
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 2000px;
+    opacity: 1;
+}
+
+.accordion-content.collapsed {
+    max-height: 0 !important;
+    opacity: 0;
+    margin-bottom: 0 !important;
+}
